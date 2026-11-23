@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Anemo · Night Sky Edition</title><meta name="description" content="Anemo: anime-native oversized tees from five realms. Scroll the story.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/story.css"><link rel="stylesheet" href="theme.css"><link rel="icon" href="data:,"></head>
+<body class="story d2">
+<div class="pageno" id="pageNo" aria-hidden="true">01 / 07</div>
+
+<section id="hero" data-chapter="landing">
+  <div class="bgblur" aria-hidden="true"></div>
+  <div class="stage-inner">
+    <img class="bg" src="../assets/hill-night.webp" alt="Five friends sitting on a grassy hill under the Milky Way" width="736" height="946" fetchpriority="high">
+    <div id="decals"></div>
+    <span class="fs" style="left:20%;top:50%;--d:1.2s">each tee = one story</span>
+    <span class="fs" style="left:66%;top:50%;--d:1.8s">280 GSM</span>
+    <span class="fs" style="left:40%;top:76%;--d:2.4s">oversized, S–XXL</span>
+  </div>
+  <div class="hero-copy">
+    <p class="eyebrow">Chapter 01 · The hill at night</p>
+    <h1>Under one <em>sky</em>.</h1>
+    <p class="sub">Four realms. One story. Oversized tees made for the ones who stay up for the next chapter.</p>
+    <div class="cta"><a class="btn solid big" href="shop.html">Order now</a><a class="btn ghost big" href="#realms">Begin the story ↓</a></div>
+  </div>
+  <a class="cue" href="#realms" aria-label="Scroll to realms"><span></span></a>
+</section>
+
+<section id="realms" data-chapter="realms" class="sec">
+  <header class="sh fx"><p class="eyebrow">Chapter 02</p><h2>Choose your realm</h2><p>Four worlds. Tap one to step inside.</p></header>
+  <div class="gates" id="gates"></div>
+  <div class="reveal" id="reveal" hidden></div>
+</section>
+
+<section id="detail" data-chapter="details" class="sec">
+  <header class="sh fx"><p class="eyebrow">Chapter 03</p><h2>Look a little closer</h2><p>The small things, noted by hand.</p></header>
+  <div class="chips-row fx" id="dChips"></div>
+  <div class="d-stage fx" id="dStage"></div>
+</section>
+
+<section id="packaging" data-chapter="packaging">
+  <div class="pk-sticky">
+    <header class="sh"><p class="eyebrow">Chapter 04</p><h2>Open the crate</h2><p>Keep scrolling. It opens itself.</p></header>
+    <div class="scene">
+      <div class="box3d">
+        <div class="face f-front"><i class="o"><em>STREETWEAR APPAREL</em></i><i class="in"></i></div>
+        <div class="face f-back"><i class="o"></i><i class="in"></i></div>
+        <div class="face f-left"><i class="o"></i><i class="in"></i></div>
+        <div class="face f-right"><i class="o"></i><i class="in"></i></div>
+        <div class="face f-bottom"><i class="o"></i><i class="in"></i></div>
+        <div class="plane p-tee"></div>
+        <div class="plane p-strap"><span>風</span></div>
+        <div class="plane p-tube"><svg viewBox="0 0 200 60" aria-hidden="true"><rect x="4" y="8" width="192" height="44" rx="14" fill="#6e9a4a" stroke="#2e4a1d" stroke-width="3"/><rect x="60" y="4" width="10" height="52" rx="3" fill="#8fbb63" stroke="#2e4a1d" stroke-width="2.5"/><rect x="132" y="4" width="10" height="52" rx="3" fill="#8fbb63" stroke="#2e4a1d" stroke-width="2.5"/><rect x="14" y="14" width="170" height="8" rx="4" fill="#fff" opacity=".22"/></svg></div>
+        <div class="plane p-note"><p>Dear wanderer,<br>your courage inspires us.<br>Keep protecting what's precious.</p><small>~ Team Anemo</small></div>
+        <div class="hinge"><div class="lid"><div class="lid-out"><b>風</b><i>ANEMO'S<br>WIND CRATE</i><small>STREETWEAR APPAREL</small></div><div class="lid-in"></div></div></div>
+      </div>
+      <figure class="pk-photo"><img src="../assets/box-reference.webp" alt="An opened black Anemo-style crate with a pink patterned lining, folded tee, bamboo charm and handwritten note" loading="lazy"></figure>
+      <p class="pk-step s1" data-at="0" data-to="0.2">A black crate, sealed shut.</p>
+      <p class="pk-step s2" data-at="0.2" data-to="0.55">Lid lifts. Pink hemp-leaf lining inside.</p>
+      <p class="pk-step s3" data-at="0.55" data-to="0.93">Tee, leather strap, bamboo charm, handwritten note.</p>
+      <p class="pk-step s4" data-at="0.93" data-to="1.01">Unboxing day.</p>
+    </div>
+    <div class="pk-prog"><i id="pkBar"></i></div>
+  </div>
+</section>
+
+<section id="reviews" data-chapter="reviews" class="sec">
+  <header class="sh fx"><p class="eyebrow">Chapter 05</p><h2>What readers say</h2><div class="ravg" id="rAvg"></div></header>
+  <div class="rlist" id="rList"></div>
+  <div class="rwrite fx">
+    <p id="rLogin">Want to add your story? <a class="link" href="account.html?next=index.html%23reviews">Log in to review</a>.</p>
+    <form id="rForm" hidden>
+      <b>Add your review</b>
+      <div class="row"><label>Realm <select id="rRealm"></select></label><label>Stars <select id="rStars"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></label></div>
+      <textarea id="rText" rows="3" maxlength="500" placeholder="How does it wear? How was the box?" aria-label="Your review"></textarea>
+      <button class="btn solid">Post review</button>
+    </form>
+  </div>
+</section>
+
+<section id="faq" data-chapter="faq" class="sec">
+  <header class="sh fx"><p class="eyebrow">Chapter 06</p><h2>Questions</h2></header>
+  <div class="faq" id="faqList"></div>
+</section>
+
+<footer id="final" data-chapter="finale">
+  <div class="fin-in">
+    <p class="eyebrow">Chapter 07</p>
+    <h2>To be continued…</h2>
+    <p>Pick your next page.</p>
+    <nav class="fnav" aria-label="Footer">
+      <a href="shop.html"><b>Shop all tees</b><span>4 limited designs</span></a>
+      <a href="#realms"><b>Realms</b><span>Blood Lily · Cosmic · Celestial · Cloudy</span></a>
+      <a href="#packaging"><b>The box</b><span>Watch it open</span></a>
+      <a href="account.html"><b>My story</b><span>Login · saved cart</span></a>
+      <a href="#faq"><b>FAQ</b><span>Sizes, shipping, returns</span></a>
+      <a href="#top"><b>Back to page one</b><span>↑</span></a>
+    </nav>
+    <a class="btn solid big" href="shop.html">Order now</a>
+    <p class="legal">© Anemo · assignment demo · prices and reviews are placeholders</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="../config.js"></script><script src="../js/data.js"></script><script src="../js/store.js"></script><script src="../js/ui.js"></script><script src="../js/story.js"></script>
+</body></html>

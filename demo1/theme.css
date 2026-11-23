@@ -1,0 +1,30 @@
+/* DEMO 1 · MANGA EDITION: ink, paper, halftone, colour pops per realm */
+:root{--bg:#fbfaf6;--fg:#111;--card:#fff;--accent:#e5482a;--buy:#ffd24a;--muted:#5d5d58;--line:rgba(17,17,17,.16);--radius:6px}
+body{background:var(--bg)}
+.pcard,.panel,.box{border-radius:4px}
+.pcard{border:2px solid var(--fg)}
+.pimg{background:radial-gradient(circle,color-mix(in srgb,var(--realm) 40%,transparent) 1.2px,transparent 1.6px) 0 0/9px 9px,linear-gradient(180deg,color-mix(in srgb,var(--realm) 12%,#fff),#fff)}
+.stage{background:radial-gradient(circle,color-mix(in srgb,var(--realm) 40%,transparent) 1.3px,transparent 1.7px) 0 0/10px 10px,#fff;border:3px solid var(--fg);border-radius:4px}
+/* paper + manga pages behind each chapter */
+.story .sec,.story #final{background-size:cover;background-position:center;isolation:isolate}
+#realms{background-image:linear-gradient(rgba(251,250,246,.9),rgba(251,250,246,.93)),url(../assets/manga-collage.webp);background-attachment:scroll}
+#detail{background-image:linear-gradient(rgba(251,250,246,.88),rgba(251,250,246,.93)),url(../assets/manga-page.webp);border-top:4px solid var(--fg)}
+#reviews{background-image:linear-gradient(rgba(251,250,246,.86),rgba(251,250,246,.92)),url(../assets/manga-color.webp);border-top:4px solid var(--fg)}
+#faq{background-image:linear-gradient(rgba(251,250,246,.9),rgba(251,250,246,.94)),url(../assets/manga-collage.webp);border-top:4px solid var(--fg)}
+#final{background:linear-gradient(rgba(251,250,246,.55),rgba(251,250,246,.95)),url(../assets/manga-color.webp) center/cover;border-top:4px solid var(--fg)}
+#packaging{background:radial-gradient(circle,rgba(0,0,0,.14) 1.3px,transparent 1.7px) 0 0/11px 11px,#f3efe4;border-top:4px solid var(--fg)}
+.sh h2{text-shadow:3px 3px 0 var(--c-sh,#ffd24a);-webkit-text-stroke:1px #111}
+.sh p:last-child{color:#333}
+/* manga panel gutters on gates */
+.gate{clip-path:polygon(0 0,100% 3%,97% 100%,3% 97%)}
+.gate:nth-child(even){clip-path:polygon(3% 3%,100% 0,100% 97%,0 100%)}
+.gate::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(0,0,0,.35) 1.3px,transparent 1.7px) 0 0/8px 8px;mix-blend-mode:multiply;opacity:.55;pointer-events:none}
+.gate:hover{box-shadow:none;transform:translateY(-6px) scale(1.02)}
+.gate.on{outline:none;filter:saturate(1.25) brightness(1.05)}
+.reveal{border-width:4px}
+.d-stage{background:radial-gradient(circle,color-mix(in srgb,var(--c) 45%,transparent) 1.4px,transparent 1.8px) 0 0/10px 10px,#fff;border-radius:4px;box-shadow:8px 8px 0 #111}
+.chips-row button{border-radius:4px}
+.rbub{border-radius:20px}
+#hero{border-bottom:4px solid #111}
+.hero-copy h1{-webkit-text-stroke:2px #111;paint-order:stroke fill;text-shadow:5px 5px 0 #111}
+.hero-copy h1 em{color:#ffd24a}

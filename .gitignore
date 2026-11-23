@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+# 17 MB single-file copy of the gallery; regenerate locally if needed
+mockups/gallery-standalone.html

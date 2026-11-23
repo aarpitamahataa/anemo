@@ -1,0 +1,75 @@
+/* DEMO 2 · NIGHT SKY EDITION: dark, glassy, glow */
+:root{--bg:#070d1c;--fg:#eaf0ff;--card:rgba(255,255,255,.06);--accent:#ffcf5a;--accent-fg:#111;--buy:#ffcf5a;--buy-fg:#101828;--muted:#9fb0d0;--line:rgba(160,185,255,.22);--radius:16px;
+  --f-display:'Space Grotesk',system-ui,sans-serif;--f-hand:'Caveat',cursive;--shadow:0 12px 40px rgba(0,0,0,.45)}
+body{background:radial-gradient(1200px 600px at 80% -10%,rgba(80,120,255,.18),transparent),radial-gradient(900px 500px at 0% 40%,rgba(255,207,90,.07),transparent),#070d1c;background-attachment:fixed}
+#top{background:rgba(7,13,28,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo-k{background:var(--accent);color:#111;border-radius:50%}
+.logo-t{font-family:var(--f-display);font-weight:700;letter-spacing:.22em;font-size:1.15rem}
+.btn{border:1.5px solid var(--line);color:var(--fg)}
+.btn.solid{background:var(--buy);color:#101828;border-color:var(--buy)}
+.btn:hover{box-shadow:0 0 24px rgba(255,207,90,.35);transform:translateY(-2px)}
+.hsearch{background:rgba(255,255,255,.08);border-color:var(--line)}.hsearch input{color:var(--fg)}.hsearch button{border-left-color:var(--line);color:#101828}
+.hlink:hover,.hlink.on{background:rgba(255,255,255,.08)}
+#bnav{background:rgba(7,13,28,.92);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.dpanel{background:#0b1226;border-left:1px solid var(--line)}.cth{background:#fff}
+.qty{border-color:var(--line)}
+#toast{background:var(--accent);color:#111}
+.pcard,.box,.buybox,.panel,.fq,.rbub,.fnav a{background:var(--card);border:1px solid var(--line);backdrop-filter:blur(6px);box-shadow:none}
+.pcard:hover{box-shadow:0 0 0 1px var(--realm),0 14px 40px rgba(0,0,0,.5)}
+.pimg{background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--realm) 55%,transparent),transparent 70%),rgba(255,255,255,.05)}
+.ptag{color:#111}.wish{background:rgba(7,13,28,.7);color:#8fa0c8}.wish.on{color:#ff6b8b}
+.prate a,.pmeta{color:var(--muted)}.pmeta .ok{color:#5be0a1}.pmeta .low{color:#ff8a7a}
+.pprice em{color:#ff8a7a}
+.filters{border-color:var(--line)}
+.realmbar button{background:transparent;border-color:var(--line);color:var(--fg)}.realmbar button.on{background:var(--accent);color:#111;border-color:var(--accent)}
+.rhead select,.field input,.rwrite select,.rwrite textarea{background:rgba(255,255,255,.07);color:var(--fg);border-color:var(--line)}
+.rhead select option,.rwrite select option{color:#111}
+.stage{background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--realm) 45%,transparent),transparent 65%),rgba(255,255,255,.04);border-color:var(--line)}
+.note{color:#fff}.note svg{stroke:var(--accent)}
+.vtoggle button{background:rgba(7,13,28,.8);color:#fff;border-color:var(--line)}.vtoggle button.on{background:var(--accent);color:#111}
+.sizes span{background:rgba(255,255,255,.06)}.sizes input:checked+span{background:var(--accent);color:#111;border-color:var(--accent)}
+.buybox .big,.pinfo .big{color:#fff}
+.tabs{border-color:var(--line)}.tabs .on{background:var(--accent);color:#111}
+.panel{box-shadow:0 0 60px rgba(80,120,255,.18)}
+.chip.got{color:#111}
+.bar{background:rgba(255,255,255,.12)}
+.link{color:var(--accent)}
+/* story */
+.pageno{background:rgba(7,13,28,.7);border-radius:999px;border:1px solid var(--line);font-family:var(--f-display);font-size:.78rem}
+#hero{height:calc(100svh - var(--hh))}
+#hero::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(transparent,#070d1c);z-index:2;pointer-events:none}
+.hero-copy h1{font-family:var(--f-display);font-weight:700;letter-spacing:-.02em;font-size:clamp(2.8rem,9vw,6.5rem);line-height:1;text-shadow:0 0 40px rgba(80,140,255,.6)}
+.hero-copy h1 em{color:#ffcf5a;font-family:'Caveat',cursive;font-weight:700;font-size:1.15em}
+.eyebrow{color:#ffcf5a}
+.sh h2{font-family:var(--f-display);font-weight:700;letter-spacing:-.02em;font-size:clamp(2.2rem,6vw,4rem)}
+.sec{background:transparent}
+/* glass gates in a horizontal rail */
+.gate{border:1px solid rgba(255,255,255,.35);border-radius:22px;box-shadow:0 20px 50px color-mix(in srgb,var(--c) 30%,transparent)}
+.gate:hover{transform:translateY(-8px);box-shadow:0 26px 60px color-mix(in srgb,var(--c) 55%,transparent)}
+.gate.on{outline:2px solid #fff;outline-offset:4px}
+.gn{font-family:var(--f-display);font-weight:700;letter-spacing:0}
+.gsfx{border-radius:999px;border:0;font-family:var(--f-display);font-size:.7rem;transform:none;background:rgba(255,255,255,.85)}
+.reveal{border:1px solid var(--line);border-radius:26px}
+.rv-head h3{font-family:var(--f-display);font-weight:700;letter-spacing:-.01em}
+.chips-row button{background:transparent;border:1px solid var(--line);color:var(--fg)}.chips-row button.on{background:var(--c);color:#101828;box-shadow:0 0 24px color-mix(in srgb,var(--c) 60%,transparent);border-color:var(--c)}
+.d-stage{border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--c) 40%,transparent),transparent 65%),rgba(255,255,255,.04)}
+.scr{color:#fff}.scr svg{stroke:var(--accent)}.scr span{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--c) 55%,transparent) 62%)}
+#packaging{background:linear-gradient(#070d1c,#0b1630 50%,#070d1c)}
+.pk-sticky .sh p:last-child{color:var(--muted)}
+.face{border-color:#2b1d0e}
+.pk-prog{border-color:var(--line)}
+.rbub{border-radius:20px;box-shadow:0 0 0 1px var(--line),0 12px 40px color-mix(in srgb,var(--c) 14%,transparent)}
+.rbub::after{display:none}
+.rbub .stars{color:var(--accent)}
+.rwrite form{background:var(--card);border-color:var(--line)}
+.fq{border-radius:16px}.fq[open]{box-shadow:0 0 0 1px var(--accent)}
+.fq summary::after{font-family:var(--f-display)}
+#final{background:linear-gradient(#070d1c,rgba(7,13,28,.7)),url(../assets/hill-night.webp) center bottom/cover}
+#final h2{font-family:var(--f-display);font-weight:700;letter-spacing:-.03em}
+.fnav a:hover{box-shadow:0 0 0 1px var(--accent);transform:translateY(-3px)}
+/* shop pages: dark variant of the red-accent layout */
+.shoppage{--red:#ff5a66;--red-fg:#10131f;--stage:#262f4a}
+.shoppage .btn.red{color:#10131f}.btn.red{color:#10131f;background:#ff5a66;border-color:#ff5a66}.pprice b{color:#ff7a84}
+.shoppage .ptag{background:var(--fg);color:#0b1020}
+.shoppage .wish{color:rgba(255,255,255,.55)}
+.modal-in{background:#0f1730}
