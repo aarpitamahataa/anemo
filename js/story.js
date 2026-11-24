@@ -6,9 +6,10 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- hero: realm tees printed on the friends' backs ---------- */
-  const decals = [[30.5, 65.4, 'lily'], [44.6, 64.2, 'cosmic'], [52.2, 65.0, 'celestial'], [61.4, 64.2, 'cloudy'], [69.0, 63.2, 'cosmic']];
+  // [x%, y%, design, blend]: dark prints use screen, light watercolour prints are shown as the ivory / white tee itself
+  const decals = [[30.5, 65.0, 'lily', 'screen', -4], [44.6, 63.6, 'cosmic', 'screen', 2], [52.2, 64.6, 'celestial', 'normal', -2], [61.4, 63.8, 'cloudy', 'normal', 3], [69.0, 62.8, 'lily', 'screen', -3]];
   const dl = $('#decals');
-  if (dl) dl.innerHTML = decals.map(d => `<img class="decal" alt="" src="../assets/${ANEMO.realm(d[2]).img}" style="left:${d[0]}%;top:${d[1]}%">`).join('');
+  if (dl) dl.innerHTML = decals.map(d => `<span class="decal" role="img" aria-label="${ANEMO.realm(d[2]).name} tee" style="left:${d[0]}%;top:${d[1]}%;--print:url(../assets/print-${d[2]}.jpg);--blend:${d[3]};--rot:${d[4]}deg"></span>`).join('');
 
   /* ---------- scroll reveal ---------- */
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .18, rootMargin: '0px 0px -6% 0px' }) : null;
